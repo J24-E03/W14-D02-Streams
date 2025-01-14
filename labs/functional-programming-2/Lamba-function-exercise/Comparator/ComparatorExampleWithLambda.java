@@ -1,10 +1,17 @@
 package Comparator;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 
 public class ComparatorExampleWithLambda {
+    /**
+     * - Create Employee Class and declare properties ,getters and setters
+     * - Create a main class and add few employee records
+     * - Add those employees in list
+     * - Use the lambda sort method to sort first ame and last name
+     * - Print the record
+     */
     public static void main(String[] args) {
+        System.out.println("+++ Exercise 1.5.2");
 
         //create a few dummy employee records and put them in a simple ArrayList instance.
         Employee employee1 = new Employee(2, "A", "F", 18);
@@ -14,7 +21,7 @@ public class ComparatorExampleWithLambda {
         Employee employee5 = new Employee(4, "w", "W", 22);
 
         //add employees
-        ArrayList<Employee> employees = new ArrayList<Employee>();
+        ArrayList<Employee> employees = new ArrayList<>();
         employees.add(employee1);
         employees.add(employee2);
         employees.add(employee3);
@@ -23,9 +30,11 @@ public class ComparatorExampleWithLambda {
 
         //sort the list using sort method
         employees.sort(
-                (o1, o2) -> o1.getFirstName().compareTo(o2.getFirstName()));
+                (o1, o2) -> o1.getFirstName().compareTo(o2.getFirstName())
+        );
 
-        for(Employee e: employees)
+        for(Employee e: employees) {
             System.out.println(e);
+        }
     }
 }
